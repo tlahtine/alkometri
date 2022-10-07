@@ -22,7 +22,7 @@ export default function App() {
   const [invalidWeight, setInvalidWeight] = useState(false);
   
   /** Constants */
-  /** Sexes */
+  /** Genders */
   const genderOptions = [
     {
       label: 'Mies',
