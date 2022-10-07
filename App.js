@@ -4,7 +4,7 @@ import { Text, SafeAreaView, TextInput, ScrollView} from 'react-native';
 import styles from './Styles';
 import {Picker} from '@react-native-picker/picker';
 import Radiobutton from './Components/Radiobutton'; 
-import MyButton from './Components/CalculateButton';
+import CalculateButton from './Components/CalculateButton';
 
 export default function App() {
   /** Load external fonts */
@@ -100,7 +100,7 @@ export default function App() {
         <Text style={styles.label}>Sukupuoli</Text>
         <Radiobutton options={genderOptions} defaultValue={gender} onPress={(value) => {setGender(value)}} /> 
         <Text style={[bloodAlcLevel >= 1.20 ? styles.bac_danger : bloodAlcLevel >= 0.5 ? styles.bac_warning : styles.bac_ok]}>{bloodAlcLevel.toFixed(2)}</Text>
-        <MyButton textStyle={styles.buttonText} text={'Tarkista ajokunto'} onPress={calculateBAL}></MyButton> 
+        <CalculateButton textStyle={styles.buttonText} text={'Tarkista ajokunto'} onPress={calculateBAL}></CalculateButton> 
       </ScrollView>
       <Text style={styles.label}> {[bloodAlcLevel >= 1.20 ? 'Törkeä rattijuopumus' : bloodAlcLevel >= 0.5 ? 'Lievä rattijuopumus' : 'Turvallista matka']} </Text>
     </SafeAreaView>
